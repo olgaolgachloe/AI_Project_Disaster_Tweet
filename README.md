@@ -13,7 +13,7 @@ Team 4
   - Data exploration
     
 - Yanwen Duan: 
-  - Clean 2020 Data
+  - Cleaned 2020 Data
   - Fine-tuned BERTweet Model  
   - Built web app 
  
