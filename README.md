@@ -1,7 +1,7 @@
 # Acknowledgement 
   At first, we would like to thank Professor Anurag Bhardwaj for teaching us so much about artificial intelligence this semester. This git repository shows our final project for Professor Bhardwaj's CS5100 Foundations of Artificical Intelligence. <br><br>
   
-# Summary of files. 
+# Summary of files
   **data, model, src** are three folders in our streamlit application. data contains all data file we use in this program. model is used to save the fine-tuned     BERTweet model for the app. We didn't upload the model due to its large size. However, we showed the fine-tuning process below and in our report. src contains all codes in our project.<br><br>
   
 # Real Disaster Tweet Detection  
