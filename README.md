@@ -1,11 +1,12 @@
 # Real Disaster Tweet Detection
 
-This is a project which builds an AI model to detect disaster twitter. The data is from 
-from [Kaggle disaster twitter](https://www.kaggle.com/c/nlp-getting-started). 
-The training framework is based on huggingface transformers 
+In this project, we train multiple AI models to detect disaster twitter and build a web application based on the model with the highest accuracy and F-1 score. This README briefly summarizes steps we take to train the model and build the app. Please read our report in the repository for more details. <br>
+We obtain two datasets from 
+from [Kaggle's Natural Language Processing with Disaster Tweets](https://www.kaggle.com/c/nlp-getting-started) and [Viktor S's Disaster Tweets dataset on Kaggle](https://www.kaggle.com/vstepanenko/disaster-tweets). 
+The training framework is based on huggingface transformers library
 while streamlit is used for web UI app. 
 
-## Contributors and distributions
+## Contributors and distributions of work
 Team 4
 - Jiameng Sun: 
   - Cleaned 2015 Data
@@ -19,20 +20,24 @@ Team 4
  
 
 ## Environment Setup
-please use python 3.7+.
+We use python 3.7+ and list other requirements for our application in requirements.txt
 ```bash
 pip install -r requirements.txt
 ```
 
 ## Data Preprocessing
-This would combine 2020 and 2015 training data, then clean up and 
-generate the final training and test data.
+prepare_training_data.py is used to combine 2020(Viktor) and 2015(Kaggle) data, then clean and 
+generate the final training and test data. 
 ```bash
 cd src
 python3 prepare_training_data.py
 ```
+## Data Visualization
+data_visualization_first_modeling.ipynb is used to clean and visualize the training data. We also runs the first model (BERT trained with 2015 train data and tested with the final test data) in the notebook. We train and test the rest of the models as described in the model training section. 
+
 ## Model Training
-Recommend using Google Colab GPU environment.
+Thanks to HuggingFace library and WandB, we create run_twitter_classification.py to train and test models. The program enables us to fine-tune models and change models with command line arguments. The modular design of the program improves our efficiency in both training and testing. 
+We trained the models in Google Colab GPU environment.
 The training script is adapted and modified from huggingface 
 [run_glue.py](https://github.com/huggingface/transformers/blob/master/examples/pytorch/text-classification/run_glue.py)
 
@@ -43,7 +48,7 @@ and only fine tune the top head layer.
 import wandb
 wandb.init()
 ```
-Then run the following training command.
+Then we run the following training commands.
 ```bash
 # bert: fine tune pretrained bert layers and fine tune head classification layer 
 python3 run_twitter_classification.py \
