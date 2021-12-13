@@ -1,7 +1,8 @@
 # Real Disaster Tweet Detection
-
-In this project, we train BERT and BERTweet NLP models to classify disaster tweets and build a web application based on BERTweet, the model with the highest accuracy and F-1 score among models trained by us. This README briefly summarizes steps we take to train the model and build the app. Please read our report in the repository for more details. <br>
-We obtain two datasets from 
+  At first, we would like to thank Professor Anurag Bhardwaj for teaching us so much about artificial intelligence this semester. This git repository shows our final project for Professor Bhardwaj's CS5100 Foundations of Artificical Intelligence. <br><br>
+  **data, model, src** are three folders in our streamlit application. data contains all data file we use in this program. model is used to save the fine-tuned     BERTweet model for the app. We didn't upload the model due to its large size. However, we showed the fine-tuning process below and in our report. src contains all codes (python files and jupyter notebooks) in our project.<br><br>
+  In this project, we train BERT and BERTweet NLP models to classify disaster tweets and build a web application based on BERTweet, the model with the highest accuracy and F-1 score among models trained by us. This README briefly summarizes steps we take to train the model and build the app. Please read our report in the repository for more details. <br><br>
+  We obtain two datasets from 
 from [Kaggle's Natural Language Processing with Disaster Tweets](https://www.kaggle.com/c/nlp-getting-started) and [Viktor S's Disaster Tweets dataset on Kaggle](https://www.kaggle.com/vstepanenko/disaster-tweets). 
 The training framework is based on huggingface transformers library
 while streamlit is used for web UI app. 
