@@ -31,7 +31,7 @@ pip install -r requirements.txt
 ```
 
 ## Data Preprocessing
-**prepare_training_data.py**(under src) is used to combine 2020(Viktor) and 2015(Kaggle) data, then clean and 
+**prepare_training_data.py** is used to combine 2020(Viktor) and 2015(Kaggle) data, then clean and 
 generate the final training and test data. 
 ```bash
 cd src
@@ -41,7 +41,7 @@ python3 prepare_training_data.py
 **data_visualization_first_modeling.ipynb** is used to clean and visualize the training data. We also fine-tunes the first model (BERT fine-tuned with 2015 train data and tested with the final test data) in the notebook. We train and test the rest of the models as described in the model training section. 
 
 ## Model Training and Fine-tuning
-Thanks to HuggingFace library and WandB, we create **run_twitter_classification.py**(under src) to train and test models. The program enables us to fine-tune models and change models with command line arguments. The modular design of the program improves our efficiency in both training and testing. That's why we fine-tune BERT(new train data) and BERTweet with run_twitter_classification.py instead of data_visualization_first_modeling.ipynb. You can find more details of our fine-tuning process in **twitterclassification.ipynb.**
+Thanks to HuggingFace library and WandB, we create **run_twitter_classification.py** to train and test models. The program enables us to fine-tune models and change models with command line arguments. The modular design of the program improves our efficiency in both training and testing. That's why we fine-tune BERT(new train data) and BERTweet with run_twitter_classification.py instead of data_visualization_first_modeling.ipynb. You can find more details of our fine-tuning process in **twitterclassification.ipynb.**
 We fine-tune the models in Google Colab GPU environment.
 The training script is adapted and modified from huggingface 
 [run_glue.py](https://github.com/huggingface/transformers/blob/master/examples/pytorch/text-classification/run_glue.py)
