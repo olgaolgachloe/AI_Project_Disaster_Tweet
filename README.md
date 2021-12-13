@@ -16,7 +16,7 @@ Team 4
 - Jiameng Sun: 
   - Cleaned 2015 Data
   - Fine-tuned BERT Model
-  - Data exploration
+  - Data exploratory analysis and data visualization
     
 - Yanwen Duan: 
   - Cleaned 2020 Data
